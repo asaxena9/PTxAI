@@ -1,0 +1,150 @@
+{
+  "methodology": {
+    "sample_hz_requested": 15.0,
+    "warmup_frames_excluded_from_latency": 10,
+    "input_rotation_deg": 0,
+    "selected_clips": [
+      "E07_P02_AF_VFL_GM.mp4",
+      "E07_P02_AR_VFL_GM.mp4",
+      "E07_P17_AR_VML_GM.mp4"
+    ],
+    "chain_confidence_threshold": 0.5,
+    "primary_analysis_side": {
+      "E07_P02_AF_VFL_GM.mp4": "left",
+      "E07_P02_AR_VFL_GM.mp4": "left",
+      "E07_P17_AR_VML_GM.mp4": "right"
+    },
+    "static_transition_definition": "bottom quartile of model-independent thumbnail frame change within each clip",
+    "angle_definition": "180 degrees minus the aspect-correct image-space hip-knee-ankle interior angle",
+    "movenet_preprocessing": "192x192 square crop; first frame is full-frame padded, then a confidence-gated hip-centered crop tracks the subject",
+    "warning": "No synchronized anatomical angle ground truth is available. Angle stability and pairwise agreement are not accuracy."
+  },
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "opencv": "4.13.0",
+    "mediapipe": "0.10.31",
+    "tensorflow": "2.20.0",
+    "numpy": "2.4.6"
+  },
+  "clips": {
+    "E07_P02_AF_VFL_GM.mp4": {
+      "clip": "E07_P02_AF_VFL_GM.mp4",
+      "source_fps": 30.00897129186603,
+      "source_frames": 1115,
+      "duration_sec": 37.15555555555556,
+      "width": 1080,
+      "height": 1920,
+      "inference_width": 1080,
+      "inference_height": 1920,
+      "input_rotation_deg": 0,
+      "stride": 2,
+      "sampled_frames": 558,
+      "effective_sample_hz": 15.004485645933014
+    },
+    "E07_P02_AR_VFL_GM.mp4": {
+      "clip": "E07_P02_AR_VFL_GM.mp4",
+      "source_fps": 30.13433133306075,
+      "source_frames": 1144,
+      "duration_sec": 37.963344444444445,
+      "width": 1080,
+      "height": 1920,
+      "inference_width": 1080,
+      "inference_height": 1920,
+      "input_rotation_deg": 0,
+      "stride": 2,
+      "sampled_frames": 572,
+      "effective_sample_hz": 15.067165666530375
+    },
+    "E07_P17_AR_VML_GM.mp4": {
+      "clip": "E07_P17_AR_VML_GM.mp4",
+      "source_fps": 30.144652720464137,
+      "source_frames": 821,
+      "duration_sec": 27.235344444444443,
+      "width": 1080,
+      "height": 1920,
+      "inference_width": 1080,
+      "inference_height": 1920,
+      "input_rotation_deg": 0,
+      "stride": 2,
+      "sampled_frames": 410,
+      "effective_sample_hz": 15.072326360232069
+    }
+  },
+  "models": [
+    {
+      "model": "mediapipe-full",
+      "model_asset_bytes": 9398198,
+      "cold_load_ms_median": null,
+      "cold_load_ms_all": [],
+      "evaluated_frames": 1540,
+      "pose_detection_coverage_pct": 100.0,
+      "any_leg_chain_coverage_pct": 100.0,
+      "all_leg_chain_coverage_pct": 96.591,
+      "primary_leg_chain_coverage_pct": 100.0,
+      "primary_median_chain_confidence": 0.95,
+      "primary_chain_coverage_by_raw_confidence_pct": {
+        "0.2": 100.0,
+        "0.3": 100.0,
+        "0.4": 100.0,
+        "0.5": 100.0,
+        "0.6": 100.0,
+        "0.7": 100.0
+      },
+      "total_pose_ms_p50": 23.179,
+      "total_pose_ms_p95": 24.358,
+      "inference_ms_p50": 22.233,
+      "inference_ms_p95": 23.388,
+      "preprocess_ms_p50": 0.941,
+      "sequential_throughput_fps": 42.832,
+      "low_motion_angle_step_deg_p50": 0.899,
+      "low_motion_angle_step_deg_p95": 7.739,
+      "all_motion_angle_step_deg_p50": 3.844,
+      "angle_second_difference_deg_p50": 2.639,
+      "thigh_length_cv_pct": 15.558,
+      "shank_length_cv_pct": 23.134,
+      "knee_angle_p05": 6.171,
+      "knee_angle_p95": 130.989,
+      "per_clip_primary_chain": [
+        {
+          "model": "mediapipe-full",
+          "clip": "E07_P02_AF_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.974,
+          "angle_p05": 4.905,
+          "angle_p50": 87.037,
+          "angle_p95": 130.457
+        },
+        {
+          "model": "mediapipe-full",
+          "clip": "E07_P02_AR_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.915,
+          "angle_p05": 9.522,
+          "angle_p50": 96.083,
+          "angle_p95": 123.715
+        },
+        {
+          "model": "mediapipe-full",
+          "clip": "E07_P17_AR_VML_GM.mp4",
+          "primary_side": "right",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.959,
+          "angle_p05": 6.526,
+          "angle_p50": 108.08,
+          "angle_p95": 135.721
+        }
+      ],
+      "in_process_runner_create_ms_all": [
+        1000.878,
+        109.626,
+        118.412
+      ]
+    }
+  ],
+  "pairwise_angle_agreement": []
+}

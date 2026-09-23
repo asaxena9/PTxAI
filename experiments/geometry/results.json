@@ -1,0 +1,147 @@
+{
+  "experiment": "relay-angle-geometry-sensitivity",
+  "version": 1,
+  "evidenceBoundary": "Synthetic projection and landmark-noise sensitivity only; not pose-model or anatomical accuracy.",
+  "aspectRatio": {
+    "frame": {
+      "width": 1280,
+      "height": 720,
+      "aspectRatio": 1.778
+    },
+    "casesEvaluated": 16,
+    "representativeCases": [
+      {
+        "trueFlexionDeg": 90,
+        "limbOrientationDeg": 0,
+        "normalizedCoordinateEstimateDeg": 90,
+        "normalizedCoordinateErrorDeg": 0,
+        "aspectCorrectedEstimateDeg": 90,
+        "aspectCorrectedErrorDeg": 0
+      },
+      {
+        "trueFlexionDeg": 90,
+        "limbOrientationDeg": 30,
+        "normalizedCoordinateEstimateDeg": 62.245,
+        "normalizedCoordinateErrorDeg": -27.755,
+        "aspectCorrectedEstimateDeg": 90,
+        "aspectCorrectedErrorDeg": 0
+      },
+      {
+        "trueFlexionDeg": 90,
+        "limbOrientationDeg": 60,
+        "normalizedCoordinateEstimateDeg": 62.245,
+        "normalizedCoordinateErrorDeg": -27.755,
+        "aspectCorrectedEstimateDeg": 90,
+        "aspectCorrectedErrorDeg": 0
+      },
+      {
+        "trueFlexionDeg": 90,
+        "limbOrientationDeg": 90,
+        "normalizedCoordinateEstimateDeg": 90,
+        "normalizedCoordinateErrorDeg": 0,
+        "aspectCorrectedEstimateDeg": 90,
+        "aspectCorrectedErrorDeg": 0
+      }
+    ],
+    "worstCase": {
+      "trueFlexionDeg": 120,
+      "limbOrientationDeg": 30,
+      "normalizedCoordinateEstimateDeg": 88.507,
+      "normalizedCoordinateErrorDeg": -31.493,
+      "aspectCorrectedEstimateDeg": 120,
+      "aspectCorrectedErrorDeg": 0
+    },
+    "summary": {
+      "normalizedCoordinatesMedianAbsoluteErrorDeg": 13.877,
+      "normalizedCoordinatesMaximumAbsoluteErrorDeg": 31.493,
+      "aspectCorrectedMaximumAbsoluteErrorDeg": 0
+    }
+  },
+  "outOfPlaneYaw": {
+    "casesEvaluated": 80,
+    "summaryByYawDeg": {
+      "0": {
+        "medianAbsoluteErrorDeg": 0,
+        "p95AbsoluteErrorDeg": 0,
+        "maximumAbsoluteErrorDeg": 0
+      },
+      "15": {
+        "medianAbsoluteErrorDeg": 0.867,
+        "p95AbsoluteErrorDeg": 1.735,
+        "maximumAbsoluteErrorDeg": 1.735
+      },
+      "30": {
+        "medianAbsoluteErrorDeg": 3.69,
+        "p95AbsoluteErrorDeg": 7.38,
+        "maximumAbsoluteErrorDeg": 7.38
+      },
+      "45": {
+        "medianAbsoluteErrorDeg": 9.232,
+        "p95AbsoluteErrorDeg": 18.463,
+        "maximumAbsoluteErrorDeg": 18.463
+      }
+    },
+    "worstCaseByYawDeg": {
+      "0": {
+        "yawDeg": 0,
+        "trueFlexionDeg": 30,
+        "limbOrientationDeg": -60,
+        "projectedEstimateDeg": 30,
+        "errorDeg": 0
+      },
+      "15": {
+        "yawDeg": 15,
+        "trueFlexionDeg": 60,
+        "limbOrientationDeg": -30,
+        "projectedEstimateDeg": 61.735,
+        "errorDeg": 1.735
+      },
+      "30": {
+        "yawDeg": 30,
+        "trueFlexionDeg": 60,
+        "limbOrientationDeg": -30,
+        "projectedEstimateDeg": 67.38,
+        "errorDeg": 7.38
+      },
+      "45": {
+        "yawDeg": 45,
+        "trueFlexionDeg": 60,
+        "limbOrientationDeg": -30,
+        "projectedEstimateDeg": 78.463,
+        "errorDeg": 18.463
+      }
+    }
+  },
+  "pixelLandmarkNoise": {
+    "seed": 20260727,
+    "sigmaPx": 2,
+    "trialsPerLength": 10000,
+    "trueFlexionDeg": 90,
+    "rows": [
+      {
+        "segmentLengthPx": 50,
+        "meanErrorDeg": 0.125,
+        "standardDeviationDeg": 4.539,
+        "p95AbsoluteErrorDeg": 8.844
+      },
+      {
+        "segmentLengthPx": 75,
+        "meanErrorDeg": 0.009,
+        "standardDeviationDeg": 3.064,
+        "p95AbsoluteErrorDeg": 5.951
+      },
+      {
+        "segmentLengthPx": 100,
+        "meanErrorDeg": 0.004,
+        "standardDeviationDeg": 2.303,
+        "p95AbsoluteErrorDeg": 4.533
+      },
+      {
+        "segmentLengthPx": 150,
+        "meanErrorDeg": 0,
+        "standardDeviationDeg": 1.534,
+        "p95AbsoluteErrorDeg": 3.001
+      }
+    ]
+  }
+}

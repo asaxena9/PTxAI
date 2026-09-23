@@ -1,0 +1,642 @@
+{
+  "evaluationVersion": 1,
+  "evidenceScope": "synthetic held-out virtual subjects only",
+  "containsRealPeople": false,
+  "warning": "These results validate software behavior and feasibility, not accuracy, safety, or generalization on human camera recordings.",
+  "heldOut": {
+    "frames": 12339,
+    "sequences": 180,
+    "subjects": 12,
+    "splitUnit": "virtual subject"
+  },
+  "learnedQuantizedTemporalModel": {
+    "joint": {
+      "accuracy": 0.8515276764729719,
+      "macroPrecision": 0.8692423299328536,
+      "macroRecall": 0.8676516024204951,
+      "macroF1": 0.8676297968445007,
+      "perClass": {
+        "heel-slide:ready": {
+          "precision": 0.8246614397719173,
+          "recall": 0.889315910837817,
+          "f1": 0.8557692307692307,
+          "support": 1301
+        },
+        "heel-slide:moving": {
+          "precision": 0.89988358556461,
+          "recall": 0.8136842105263158,
+          "f1": 0.8546158098396904,
+          "support": 950
+        },
+        "heel-slide:holding": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8696711327649208,
+          "f1": 0.8633615477629988,
+          "support": 821
+        },
+        "heel-slide:returning": {
+          "precision": 0.8411513859275054,
+          "recall": 0.878619153674833,
+          "f1": 0.8594771241830066,
+          "support": 898
+        },
+        "heel-slide:paused": {
+          "precision": 1.0,
+          "recall": 0.9032258064516129,
+          "f1": 0.9491525423728814,
+          "support": 93
+        },
+        "straight-leg-raise:ready": {
+          "precision": 0.8192371475953566,
+          "recall": 0.7785657998423956,
+          "f1": 0.7983838383838384,
+          "support": 1269
+        },
+        "straight-leg-raise:moving": {
+          "precision": 0.8269030239833159,
+          "recall": 0.7867063492063492,
+          "f1": 0.8063040162684291,
+          "support": 1008
+        },
+        "straight-leg-raise:holding": {
+          "precision": 0.7823721436343852,
+          "recall": 0.8273878020713463,
+          "f1": 0.8042505592841164,
+          "support": 869
+        },
+        "straight-leg-raise:returning": {
+          "precision": 0.8357628765792031,
+          "recall": 0.8414872798434442,
+          "f1": 0.8386153096050707,
+          "support": 1022
+        },
+        "straight-leg-raise:paused": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "support": 80
+        },
+        "seated-knee-extension:ready": {
+          "precision": 0.9070660522273426,
+          "recall": 0.8974164133738601,
+          "f1": 0.9022154316271963,
+          "support": 1316
+        },
+        "seated-knee-extension:moving": {
+          "precision": 0.8568398727465536,
+          "recall": 0.8782608695652174,
+          "f1": 0.8674181427804616,
+          "support": 920
+        },
+        "seated-knee-extension:holding": {
+          "precision": 0.8430160692212608,
+          "recall": 0.866581956797967,
+          "f1": 0.8546365914786967,
+          "support": 787
+        },
+        "seated-knee-extension:returning": {
+          "precision": 0.9076576576576577,
+          "recall": 0.8713513513513513,
+          "f1": 0.8891340319911748,
+          "support": 925
+        },
+        "seated-knee-extension:paused": {
+          "precision": 0.948051948051948,
+          "recall": 0.9125,
+          "f1": 0.9299363057324841,
+          "support": 80
+        }
+      }
+    },
+    "exercise": {
+      "accuracy": 0.9775508550125618,
+      "macroPrecision": 0.9777368142725757,
+      "macroRecall": 0.9778184175052188,
+      "macroF1": 0.9777539786582166,
+      "perClass": {
+        "heel-slide": {
+          "precision": 0.9621083313092057,
+          "recall": 0.9748953974895398,
+          "f1": 0.9684596577017115,
+          "support": 4063
+        },
+        "straight-leg-raise": {
+          "precision": 0.9735902926481085,
+          "recall": 0.963276836158192,
+          "f1": 0.9684061057862975,
+          "support": 4248
+        },
+        "seated-knee-extension": {
+          "precision": 0.9975118188604131,
+          "recall": 0.9952830188679245,
+          "f1": 0.996396172486641,
+          "support": 4028
+        }
+      }
+    },
+    "exerciseActiveFrames": {
+      "accuracy": 0.9904176032177925,
+      "macroPrecision": 0.9906362473938114,
+      "macroRecall": 0.9903954114478116,
+      "macroF1": 0.9905077920234765,
+      "perClass": {
+        "heel-slide": {
+          "precision": 0.9912631962140517,
+          "recall": 0.9858797972483707,
+          "f1": 0.98856416772554,
+          "support": 2762
+        },
+        "straight-leg-raise": {
+          "precision": 0.9843437708194537,
+          "recall": 0.9919436052366566,
+          "f1": 0.9881290754054506,
+          "support": 2979
+        },
+        "seated-knee-extension": {
+          "precision": 0.996301775147929,
+          "recall": 0.9933628318584071,
+          "f1": 0.9948301329394387,
+          "support": 2712
+        }
+      }
+    },
+    "phase": {
+      "accuracy": 0.8640894724045709,
+      "macroPrecision": 0.883751724046606,
+      "macroRecall": 0.8825378640926542,
+      "macroF1": 0.8830197770998216,
+      "perClass": {
+        "ready": {
+          "precision": 0.8839171567374073,
+          "recall": 0.8896037056098817,
+          "f1": 0.8867513146081827,
+          "support": 3886
+        },
+        "moving": {
+          "precision": 0.8627308946034046,
+          "recall": 0.8276580958999306,
+          "f1": 0.844830643731158,
+          "support": 2878
+        },
+        "holding": {
+          "precision": 0.827801639984381,
+          "recall": 0.8558740411788454,
+          "f1": 0.8416038110361255,
+          "support": 2477
+        },
+        "returning": {
+          "precision": 0.8602451838879159,
+          "recall": 0.8632688927943761,
+          "f1": 0.8617543859649123,
+          "support": 2845
+        },
+        "paused": {
+          "precision": 0.9840637450199203,
+          "recall": 0.9762845849802372,
+          "f1": 0.9801587301587301,
+          "support": 253
+        }
+      }
+    },
+    "boundaries": {
+      "toleranceFrames": 2,
+      "matched": 722,
+      "truthBoundaries": 791,
+      "predictedBoundaries": 1978,
+      "precision": 0.36501516683518703,
+      "recall": 0.9127686472819216,
+      "f1": 0.5214879017695919,
+      "meanAbsoluteFrameError": 0.6578947368421053
+    },
+    "calibration": {
+      "temperature": 1.05,
+      "jointExpectedCalibrationError": 0.022862123587073742,
+      "confirmedExercisePhaseExpectedCalibrationError": 0.018203222043452972,
+      "meanConfidence": 0.8871207237243652,
+      "coverageAfterAbstention": 0.8804603290380095,
+      "selectivePhaseAccuracy": 0.8986561119293078,
+      "task": "phase classification conditioned on confirmed exercise"
+    },
+    "breakdown": {
+      "view": {
+        "oblique": {
+          "frames": 4563,
+          "jointMacroF1": 0.8757037363958103,
+          "exerciseMacroF1": 0.978250420447671,
+          "phaseMacroF1": 0.891973017594202
+        },
+        "side": {
+          "frames": 4451,
+          "jointMacroF1": 0.8755425625096815,
+          "exerciseMacroF1": 0.9835360066898673,
+          "phaseMacroF1": 0.8901592323003499
+        },
+        "very-oblique": {
+          "frames": 3325,
+          "jointMacroF1": 0.8484525633698472,
+          "exerciseMacroF1": 0.9685032899382998,
+          "phaseMacroF1": 0.8604467003566955
+        }
+      },
+      "speed": {
+        "fast": {
+          "frames": 2208,
+          "jointMacroF1": 0.8386448425130609,
+          "exerciseMacroF1": 0.9525074585996861,
+          "phaseMacroF1": 0.8728136957526264
+        },
+        "normal": {
+          "frames": 6377,
+          "jointMacroF1": 0.8750963865990821,
+          "exerciseMacroF1": 0.9803267686171769,
+          "phaseMacroF1": 0.8900157839816203
+        },
+        "slow": {
+          "frames": 3754,
+          "jointMacroF1": 0.8658000886344771,
+          "exerciseMacroF1": 0.9847242027842927,
+          "phaseMacroF1": 0.8663288694957385
+        }
+      },
+      "trackingQuality": {
+        "clean": {
+          "frames": 8371,
+          "jointMacroF1": 0.8735662821317908,
+          "exerciseMacroF1": 0.983480729594601,
+          "phaseMacroF1": 0.8806240273678501
+        },
+        "noisy": {
+          "frames": 3715,
+          "jointMacroF1": 0.7952045328075253,
+          "exerciseMacroF1": 0.9656778502907053,
+          "phaseMacroF1": 0.8103347206104463
+        },
+        "occluded": {
+          "frames": 253,
+          "jointMacroF1": 0.9481924596580629,
+          "exerciseMacroF1": 0.9559809528849778,
+          "phaseMacroF1": 0.988
+        }
+      }
+    },
+    "phaseGivenConfirmedExercise": {
+      "accuracy": 0.8692762784666505,
+      "macroPrecision": 0.8874029006064408,
+      "macroRecall": 0.886866782797797,
+      "macroF1": 0.8869636214938155,
+      "perClass": {
+        "ready": {
+          "precision": 0.8861624082974956,
+          "recall": 0.9014410705095214,
+          "f1": 0.8937364459752519,
+          "support": 3886
+        },
+        "moving": {
+          "precision": 0.8771480804387568,
+          "recall": 0.8335649756775538,
+          "f1": 0.8548013539996436,
+          "support": 2878
+        },
+        "holding": {
+          "precision": 0.8274111675126904,
+          "recall": 0.855470327008478,
+          "f1": 0.8412068281063915,
+          "support": 2477
+        },
+        "returning": {
+          "precision": 0.8660556926330631,
+          "recall": 0.8636203866432337,
+          "f1": 0.8648363252375924,
+          "support": 2845
+        },
+        "paused": {
+          "precision": 0.9802371541501976,
+          "recall": 0.9802371541501976,
+          "f1": 0.9802371541501976,
+          "support": 253
+        }
+      }
+    }
+  },
+  "kinematicBaseline": {
+    "joint": {
+      "accuracy": 0.34532782235189236,
+      "macroPrecision": 0.514709132264048,
+      "macroRecall": 0.45870958251244176,
+      "macroF1": 0.403938421357029,
+      "perClass": {
+        "heel-slide:ready": {
+          "precision": 0.07894736842105263,
+          "recall": 0.0023059185242121443,
+          "f1": 0.004480955937266617,
+          "support": 1301
+        },
+        "heel-slide:moving": {
+          "precision": 0.2582807570977918,
+          "recall": 0.6894736842105263,
+          "f1": 0.3757888697647734,
+          "support": 950
+        },
+        "heel-slide:holding": {
+          "precision": 0.5914634146341463,
+          "recall": 0.11814859926918392,
+          "f1": 0.19695431472081218,
+          "support": 821
+        },
+        "heel-slide:returning": {
+          "precision": 0.24930747922437674,
+          "recall": 0.7015590200445434,
+          "f1": 0.3678832116788321,
+          "support": 898
+        },
+        "heel-slide:paused": {
+          "precision": 0.773109243697479,
+          "recall": 0.989247311827957,
+          "f1": 0.8679245283018868,
+          "support": 93
+        },
+        "straight-leg-raise:ready": {
+          "precision": 0.38578680203045684,
+          "recall": 0.05988967691095351,
+          "f1": 0.10368349249658936,
+          "support": 1269
+        },
+        "straight-leg-raise:moving": {
+          "precision": 0.3348247576435496,
+          "recall": 0.44543650793650796,
+          "f1": 0.3822903363133248,
+          "support": 1008
+        },
+        "straight-leg-raise:holding": {
+          "precision": 0.5492957746478874,
+          "recall": 0.04487917146144994,
+          "f1": 0.08297872340425531,
+          "support": 869
+        },
+        "straight-leg-raise:returning": {
+          "precision": 0.3359683794466403,
+          "recall": 0.4158512720156556,
+          "f1": 0.3716659379099257,
+          "support": 1022
+        },
+        "straight-leg-raise:paused": {
+          "precision": 0.9818181818181818,
+          "recall": 0.675,
+          "f1": 0.8,
+          "support": 80
+        },
+        "seated-knee-extension:ready": {
+          "precision": 0.7655172413793103,
+          "recall": 0.16869300911854104,
+          "f1": 0.2764632627646326,
+          "support": 1316
+        },
+        "seated-knee-extension:moving": {
+          "precision": 0.38430467397576457,
+          "recall": 0.7239130434782609,
+          "f1": 0.5020731247644177,
+          "support": 920
+        },
+        "seated-knee-extension:holding": {
+          "precision": 0.655367231638418,
+          "recall": 0.1473951715374841,
+          "f1": 0.24066390041493776,
+          "support": 787
+        },
+        "seated-knee-extension:returning": {
+          "precision": 0.37664567830566686,
+          "recall": 0.7113513513513513,
+          "f1": 0.49251497005988026,
+          "support": 925
+        },
+        "seated-knee-extension:paused": {
+          "precision": 1.0,
+          "recall": 0.9875,
+          "f1": 0.9937106918238994,
+          "support": 80
+        }
+      }
+    },
+    "exercise": {
+      "accuracy": 0.8344274252370533,
+      "macroPrecision": 0.8547808705654086,
+      "macroRecall": 0.8383908822263,
+      "macroF1": 0.8330372952867205,
+      "perClass": {
+        "heel-slide": {
+          "precision": 0.687592867756315,
+          "recall": 0.9111493969972927,
+          "f1": 0.7837408701174976,
+          "support": 4063
+        },
+        "straight-leg-raise": {
+          "precision": 0.8767497439399112,
+          "recall": 0.6045197740112994,
+          "f1": 0.7156193395569179,
+          "support": 4248
+        },
+        "seated-knee-extension": {
+          "precision": 1.0,
+          "recall": 0.9995034756703078,
+          "f1": 0.9997516761857462,
+          "support": 4028
+        }
+      }
+    },
+    "exerciseActiveFrames": {
+      "accuracy": 0.9157695492724477,
+      "macroPrecision": 0.9261229149518933,
+      "macroRecall": 0.9197048126585036,
+      "macroF1": 0.9170110976844331,
+      "perClass": {
+        "heel-slide": {
+          "precision": 0.8074385122975405,
+          "recall": 0.9746560463432296,
+          "f1": 0.8832020997375328,
+          "support": 2762
+        },
+        "straight-leg-raise": {
+          "precision": 0.9709302325581395,
+          "recall": 0.7848271231957032,
+          "f1": 0.8680155930944867,
+          "support": 2979
+        },
+        "seated-knee-extension": {
+          "precision": 1.0,
+          "recall": 0.9996312684365781,
+          "f1": 0.9998156002212797,
+          "support": 2712
+        }
+      }
+    },
+    "phase": {
+      "accuracy": 0.3828511224572494,
+      "macroPrecision": 0.609993846596439,
+      "macroRecall": 0.5079328901179385,
+      "macroF1": 0.45201743593246996,
+      "perClass": {
+        "ready": {
+          "precision": 0.7523809523809524,
+          "recall": 0.10164693772516727,
+          "f1": 0.1790977102697801,
+          "support": 3886
+        },
+        "moving": {
+          "precision": 0.34634581105169343,
+          "recall": 0.6751216122307158,
+          "f1": 0.457822808671065,
+          "support": 2878
+        },
+        "holding": {
+          "precision": 0.6116504854368932,
+          "recall": 0.10173597093257973,
+          "f1": 0.17445482866043613,
+          "support": 2477
+        },
+        "returning": {
+          "precision": 0.33959198411265573,
+          "recall": 0.6611599297012303,
+          "f1": 0.4487118320610687,
+          "support": 2845
+        },
+        "paused": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 253
+        }
+      }
+    },
+    "boundaries": {
+      "toleranceFrames": 2,
+      "matched": 789,
+      "truthBoundaries": 791,
+      "predictedBoundaries": 7571,
+      "precision": 0.1042134460441157,
+      "recall": 0.9974715549936789,
+      "f1": 0.18871083472853384,
+      "meanAbsoluteFrameError": 0.2623574144486692
+    },
+    "breakdown": {
+      "view": {
+        "oblique": {
+          "frames": 4563,
+          "jointMacroF1": 0.38342108236731154,
+          "exerciseMacroF1": 0.8306257117174131,
+          "phaseMacroF1": 0.4454535270674006
+        },
+        "side": {
+          "frames": 4451,
+          "jointMacroF1": 0.4047593625898797,
+          "exerciseMacroF1": 0.818746605795801,
+          "phaseMacroF1": 0.44156687960931806
+        },
+        "very-oblique": {
+          "frames": 3325,
+          "jointMacroF1": 0.44392393250170176,
+          "exerciseMacroF1": 0.8532813401647227,
+          "phaseMacroF1": 0.47410891948805
+        }
+      },
+      "speed": {
+        "fast": {
+          "frames": 2208,
+          "jointMacroF1": 0.39871227874631526,
+          "exerciseMacroF1": 0.8193119157336405,
+          "phaseMacroF1": 0.435195557745347
+        },
+        "normal": {
+          "frames": 6377,
+          "jointMacroF1": 0.41181775294255074,
+          "exerciseMacroF1": 0.8343123881172462,
+          "phaseMacroF1": 0.45560770615350243
+        },
+        "slow": {
+          "frames": 3754,
+          "jointMacroF1": 0.3729270852867614,
+          "exerciseMacroF1": 0.8263961095908628,
+          "phaseMacroF1": 0.45111886021578673
+        }
+      },
+      "trackingQuality": {
+        "clean": {
+          "frames": 8371,
+          "jointMacroF1": 0.30908786815621664,
+          "exerciseMacroF1": 0.8266927647149648,
+          "phaseMacroF1": 0.3430630382736891
+        },
+        "noisy": {
+          "frames": 3715,
+          "jointMacroF1": 0.22233025596651626,
+          "exerciseMacroF1": 0.8415599866725936,
+          "phaseMacroF1": 0.24954897013965827
+        },
+        "occluded": {
+          "frames": 253,
+          "jointMacroF1": 0.8872117400419288,
+          "exerciseMacroF1": 0.8872117400419288,
+          "phaseMacroF1": 1.0
+        }
+      }
+    },
+    "phaseGivenConfirmedExercise": {
+      "accuracy": 0.4035173028608477,
+      "macroPrecision": 0.6102762459273021,
+      "macroRecall": 0.5211230938110099,
+      "macroF1": 0.4745483552678542,
+      "perClass": {
+        "ready": {
+          "precision": 0.7302483069977427,
+          "recall": 0.1664951106536284,
+          "f1": 0.27116512992455993,
+          "support": 3886
+        },
+        "moving": {
+          "precision": 0.3573279052553664,
+          "recall": 0.6709520500347463,
+          "f1": 0.4663124849070273,
+          "support": 2878
+        },
+        "holding": {
+          "precision": 0.6116504854368932,
+          "recall": 0.10173597093257973,
+          "f1": 0.17445482866043613,
+          "support": 2477
+        },
+        "returning": {
+          "precision": 0.3521545319465082,
+          "recall": 0.6664323374340949,
+          "f1": 0.46080933284724757,
+          "support": 2845
+        },
+        "paused": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 253
+        }
+      }
+    }
+  },
+  "comparison": {
+    "jointMacroF1Delta": 0.4636913754874717,
+    "exerciseMacroF1Delta": 0.144716683371496,
+    "phaseMacroF1Delta": 0.43100234116735164,
+    "phaseGivenConfirmedExerciseMacroF1Delta": 0.41241526622596125
+  },
+  "quantization": {
+    "floatCheckpointJointMacroF1": 0.8688070549991591,
+    "int8ArtifactJointMacroF1": 0.8676297968445007,
+    "predictionAgreement": 0.987600291757841
+  },
+  "artifact": {
+    "path": "public/models/temporal/relay-temporal-v1.json",
+    "bytes": 7813,
+    "sha256": "8312867bd19bc6d531eb2f2b8ad415ba01cc5a47950b8f29f1bd06611954e23f"
+  },
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  }
+}

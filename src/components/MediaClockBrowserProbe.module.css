@@ -1,0 +1,482 @@
+.screen {
+  min-height: 100vh;
+  padding-bottom: 80px;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(168, 255, 207, 0.28), transparent 26%),
+    radial-gradient(circle at 92% 4%, rgba(232, 225, 255, 0.7), transparent 28%);
+}
+
+.header,
+.hero,
+.workspace {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink-faint);
+  font-size: 12px;
+  font-weight: 720;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--forest-dark);
+  font-size: 14px;
+  font-weight: 760;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.hero {
+  display: grid;
+  padding: 54px 0 34px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  align-items: end;
+  gap: 42px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5c43a7;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 780px;
+  margin: 13px 0 16px;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+}
+
+.hero > div > p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.58;
+}
+
+.boundary {
+  display: flex;
+  padding: 19px;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid rgba(92, 67, 167, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-soft);
+}
+
+.boundary > svg {
+  flex: 0 0 auto;
+  color: #5c43a7;
+}
+
+.boundary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.boundary strong {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.boundary span {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.workspace {
+  overflow: hidden;
+  border: 1px solid rgba(38, 84, 72, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 254, 250, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.intro {
+  display: flex;
+  padding: 28px clamp(24px, 4vw, 46px);
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.intro > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.intro span {
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.intro h2,
+.resultsHeading h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.intro p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.previewGrid {
+  display: grid;
+  padding: 28px clamp(24px, 4vw, 46px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.previewCard {
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid rgba(38, 84, 72, 0.14);
+  border-radius: 17px;
+  background: var(--forest-deep);
+}
+
+.previewCard > div {
+  display: flex;
+  min-height: 48px;
+  padding: 0 13px;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f4fff8;
+  font-size: 12px;
+}
+
+.previewCard > div span {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  border-radius: 99px;
+  background: rgba(168, 255, 207, 0.14);
+  color: var(--mint-bright);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.previewCard canvas,
+.previewCard video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0c2b26;
+  object-fit: contain;
+}
+
+.decodeCanvas {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.runBar {
+  display: flex;
+  margin: 0 clamp(24px, 4vw, 46px) 32px;
+  padding: 18px;
+  align-items: center;
+  gap: 18px;
+  border-radius: 16px;
+  background: var(--mint-soft);
+}
+
+.runBar button {
+  display: inline-flex;
+  min-height: 50px;
+  flex: 0 0 auto;
+  padding: 0 18px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 13px;
+  background: var(--forest);
+  color: white;
+  font-weight: 760;
+}
+
+.runBar > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.runBar strong {
+  font-size: 13px;
+}
+
+.runBar span {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.notice {
+  display: flex;
+  margin: 0 clamp(24px, 4vw, 46px) 32px;
+  padding: 14px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #ebb9ad;
+  border-radius: 13px;
+  background: var(--red-soft);
+  color: #7e302b;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.notice > svg {
+  flex: 0 0 auto;
+}
+
+.results {
+  padding: 32px clamp(24px, 4vw, 46px) 42px;
+  border-top: 1px solid var(--line);
+}
+
+.resultsHeading {
+  display: flex;
+  margin-bottom: 22px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.resultsHeading > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+.resultsHeading > div svg {
+  grid-row: 1 / span 2;
+  color: var(--forest);
+}
+
+.resultsHeading > div span {
+  color: var(--forest);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.resultsHeading h2 {
+  overflow-wrap: anywhere;
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+.scopePill {
+  max-width: 280px;
+  padding: 7px 10px;
+  border-radius: 99px;
+  background: #eee8ff;
+  color: #5c43a7;
+  font-size: 10px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metricGrid article {
+  display: flex;
+  min-width: 0;
+  padding: 17px;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #d5dcd8;
+  border-radius: 15px;
+  background: white;
+}
+
+.metricGrid span,
+.hashCard > span {
+  color: var(--ink-faint);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.metricGrid strong {
+  overflow-wrap: anywhere;
+  color: var(--forest-dark);
+  font-size: 18px;
+}
+
+.metricGrid small,
+.hashCard small {
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.hashCard {
+  display: flex;
+  margin-top: 14px;
+  padding: 16px;
+  flex-direction: column;
+  gap: 7px;
+  border: 1px solid #d3dbd7;
+  border-radius: 14px;
+  background: #f8faf8;
+}
+
+.hashCard code {
+  overflow-wrap: anywhere;
+  color: var(--forest-dark);
+  font-size: 12px;
+}
+
+.claimBoundary {
+  margin-top: 14px;
+  padding: 17px 19px;
+  border: 1px solid rgba(92, 67, 167, 0.18);
+  border-radius: 14px;
+  background: rgba(232, 225, 255, 0.42);
+}
+
+.claimBoundary strong {
+  font-size: 13px;
+}
+
+.claimBoundary ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.downloads {
+  display: flex;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.downloads button {
+  display: inline-flex;
+  min-height: 46px;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #cbd7d2;
+  border-radius: 12px;
+  background: white;
+  color: var(--forest-dark);
+  font-size: 13px;
+  font-weight: 730;
+}
+
+@media (max-width: 880px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .previewGrid,
+  .metricGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .previewCard:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .header,
+  .hero,
+  .workspace {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .header > span {
+    display: none;
+  }
+
+  .hero {
+    padding: 34px 0 24px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .intro,
+  .runBar,
+  .resultsHeading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .previewGrid,
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .previewCard:last-child {
+    grid-column: auto;
+  }
+
+  .runBar button,
+  .downloads button {
+    width: 100%;
+  }
+
+  .scopePill {
+    max-width: none;
+  }
+}

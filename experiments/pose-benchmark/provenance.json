@@ -1,0 +1,53 @@
+{
+  "dataset": {
+    "title": "MobiPhysio: A 2D video dataset of physiotherapy exercises for AI-driven assessment and monitoring",
+    "datasetDoi": "10.7910/DVN/XSI0QN",
+    "articleDoi": "10.1016/j.dib.2026.112635",
+    "publisher": "Harvard Dataverse",
+    "licenseAsReportedByDataverseApi": "CC0 1.0",
+    "accessed": "2026-07-27",
+    "samples": [
+      {
+        "filename": "E07_P02_AF_VFL_GM.mp4",
+        "dataverseFileId": 11718308,
+        "bytes": 12382556,
+        "sha256": "3a69a3f21547a0994328d4fbd627c699ef3ccb43a0324279d7cd1f7e17be156c",
+        "label": "E07 hip joint flexion; participant P02; front; full light"
+      },
+      {
+        "filename": "E07_P02_AR_VFL_GM.mp4",
+        "dataverseFileId": 11718300,
+        "bytes": 13288100,
+        "sha256": "06e0cbcb6adb371961889d9bd3b7a9c193460426606a2091dcc673cd1bc9ca2d",
+        "label": "E07 hip joint flexion; participant P02; right view; full light"
+      },
+      {
+        "filename": "E07_P17_AR_VML_GM.mp4",
+        "dataverseFileId": 11788645,
+        "bytes": 11362378,
+        "sha256": "e07908ad9ea7211d994c9473936f4d3781e912a41fe595cf0193a6d360179ba8",
+        "label": "E07 hip joint flexion; participant P17; right view; medium light"
+      }
+    ]
+  },
+  "models": [
+    {
+      "name": "MediaPipe Pose Landmarker Lite",
+      "source": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/latest/pose_landmarker_lite.task?generation=1682624738331272",
+      "bytes": 5777746,
+      "sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a"
+    },
+    {
+      "name": "MediaPipe Pose Landmarker Full",
+      "source": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/latest/pose_landmarker_full.task?generation=1682642787774579",
+      "bytes": 9398198,
+      "sha256": "4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad"
+    },
+    {
+      "name": "MoveNet SinglePose Lightning float16 v4",
+      "source": "https://tfhub.dev/google/lite-model/movenet/singlepose/lightning/tflite/float16/4?lite-format=tflite",
+      "bytes": 4758512,
+      "sha256": "0fac2226112d0371903ca86e3853cec24ef603a0b2f96f589b180f0ebdd135ab"
+    }
+  ]
+}

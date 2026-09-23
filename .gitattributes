@@ -1,0 +1,10 @@
+*.jpg binary
+*.png binary
+*.task binary
+*.wasm binary
+
+# Preserve benchmark CSV output while treating CRLF as a valid line ending.
+experiments/pose-benchmark/results/**/*.csv whitespace=cr-at-eol
+
+# These JavaScript shims are copied verbatim from the pinned MediaPipe package.
+public/mediapipe/*.js -whitespace

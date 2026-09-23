@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "relay-temporal-synthetic-v1",
+  "origin": "synthetic",
+  "containsRealPeople": false,
+  "realRecordingCount": 0,
+  "reasonRealDataUnavailable": "No consented, annotated human exercise recordings were available in the greenfield workspace.",
+  "generator": {
+    "name": "relay-synthetic-pose-v1",
+    "source": "ml/relay_temporal/synthetic.py",
+    "seed": 73021
+  },
+  "splitPolicy": {
+    "unit": "virtual subject",
+    "trainSubjectSeedRange": [0, 29],
+    "validationSubjectSeedRange": [10000, 10007],
+    "heldOutSubjectSeedRange": [20000, 20011],
+    "leakageRule": "A virtual subject and its body proportions never appear in more than one split."
+  },
+  "coverage": {
+    "exercises": [
+      "heel-slide",
+      "straight-leg-raise",
+      "seated-knee-extension"
+    ],
+    "phases": ["ready", "moving", "holding", "returning", "paused"],
+    "variation": [
+      "left and right side",
+      "virtual limb proportions",
+      "movement speed",
+      "hold duration",
+      "camera yaw, pitch, roll, framing, and distance",
+      "landmark noise",
+      "tracking loss and occlusion"
+    ]
+  },
+  "permittedClaims": [
+    "The end-to-end data, training, quantization, and inference path executes.",
+    "The learned temporal component can outperform the checked-in threshold baseline on disjoint generated trajectories.",
+    "Synthetic replay can exercise ambiguity and abstention paths deterministically."
+  ],
+  "prohibitedClaims": [
+    "Accuracy on people or real camera video",
+    "Clinical measurement accuracy or clinical validity",
+    "Safety of target or restriction guidance",
+    "Pose-provider landmark accuracy",
+    "Generalization across bodies, mobility levels, clothing, devices, or homes"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "failed-instrumentation",
+  "stage": "module import before training",
+  "reason": "The dynamically loaded base audit module was not registered in sys.modules, causing Python dataclass annotation resolution to fail.",
+  "dataRead": false,
+  "trainingStarted": false,
+  "resultUsed": false,
+  "fix": "Register the module in sys.modules before exec_module."
+}

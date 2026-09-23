@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "recordingId": "replace-me-001",
+  "origin": "recorded-human",
+  "participant": {
+    "pseudonymousId": "participant-replace-me",
+    "cohortTags": []
+  },
+  "consent": {
+    "obtained": true,
+    "protocolId": "replace-with-approved-protocol",
+    "allowedUses": ["model-development"]
+  },
+  "exercise": "heel-slide",
+  "side": "right",
+  "split": "unassigned",
+  "camera": {
+    "deviceClass": "replace-me",
+    "orientation": "landscape",
+    "view": "side",
+    "distanceBand": "standard",
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "mirroredPreview": false
+  },
+  "poseProvider": {
+    "name": "mediapipe",
+    "model": "pose-landmarker-full",
+    "version": "record-exact-version"
+  },
+  "files": {
+    "landmarks": "raw/replace-me.landmarks.json",
+    "landmarksSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "annotations": {
+    "annotatorId": "replace-me",
+    "phaseSegments": [],
+    "repetitions": [],
+    "qualitySegments": [],
+    "constraintEvents": []
+  }
+}

@@ -1,0 +1,6 @@
+.generated/*
+!.generated/.gitkeep
+capture/raw/*
+!capture/raw/.gitkeep
+__pycache__/
+*.py[cod]

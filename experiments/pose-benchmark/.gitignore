@@ -1,0 +1,8 @@
+.venv/
+.deps/
+data/
+models/
+results/latest/
+results/orientation-head-up/
+__pycache__/
+*.pyc

@@ -1,0 +1,314 @@
+{
+  "methodology": {
+    "sample_hz_requested": 10.0,
+    "warmup_frames_excluded_from_latency": 10,
+    "chain_confidence_threshold": 0.5,
+    "primary_analysis_side": {
+      "E07_P02_AF_VFL_GM.mp4": "left",
+      "E07_P02_AR_VFL_GM.mp4": "left",
+      "E07_P17_AR_VML_GM.mp4": "right"
+    },
+    "static_transition_definition": "bottom quartile of model-independent thumbnail frame change within each clip",
+    "angle_definition": "180 degrees minus the aspect-correct image-space hip-knee-ankle interior angle",
+    "movenet_preprocessing": "192x192 square crop; first frame is full-frame padded, then a confidence-gated hip-centered crop tracks the subject",
+    "warning": "No synchronized anatomical angle ground truth is available. Angle stability and pairwise agreement are not accuracy."
+  },
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "opencv": "4.13.0",
+    "mediapipe": "0.10.31",
+    "tensorflow": "2.20.0",
+    "numpy": "2.4.6"
+  },
+  "clips": {
+    "E07_P02_AF_VFL_GM.mp4": {
+      "clip": "E07_P02_AF_VFL_GM.mp4",
+      "source_fps": 30.00897129186603,
+      "source_frames": 1115,
+      "duration_sec": 37.15555555555556,
+      "width": 1080,
+      "height": 1920,
+      "stride": 3,
+      "sampled_frames": 372,
+      "effective_sample_hz": 10.00299043062201
+    },
+    "E07_P02_AR_VFL_GM.mp4": {
+      "clip": "E07_P02_AR_VFL_GM.mp4",
+      "source_fps": 30.13433133306075,
+      "source_frames": 1144,
+      "duration_sec": 37.963344444444445,
+      "width": 1080,
+      "height": 1920,
+      "stride": 3,
+      "sampled_frames": 382,
+      "effective_sample_hz": 10.04477711102025
+    },
+    "E07_P17_AR_VML_GM.mp4": {
+      "clip": "E07_P17_AR_VML_GM.mp4",
+      "source_fps": 30.144652720464137,
+      "source_frames": 821,
+      "duration_sec": 27.235344444444443,
+      "width": 1080,
+      "height": 1920,
+      "stride": 3,
+      "sampled_frames": 274,
+      "effective_sample_hz": 10.048217573488046
+    }
+  },
+  "models": [
+    {
+      "model": "mediapipe-lite",
+      "model_asset_bytes": 5777746,
+      "cold_load_ms_median": 289.246,
+      "cold_load_ms_all": [
+        433.382,
+        252.718,
+        289.246
+      ],
+      "evaluated_frames": 1028,
+      "pose_detection_coverage_pct": 100.0,
+      "any_leg_chain_coverage_pct": 100.0,
+      "all_leg_chain_coverage_pct": 97.471,
+      "primary_leg_chain_coverage_pct": 100.0,
+      "primary_median_chain_confidence": 0.966,
+      "primary_chain_coverage_by_raw_confidence_pct": {
+        "0.2": 100.0,
+        "0.3": 100.0,
+        "0.4": 100.0,
+        "0.5": 100.0,
+        "0.6": 100.0,
+        "0.7": 100.0
+      },
+      "total_pose_ms_p50": 13.647,
+      "total_pose_ms_p95": 30.089,
+      "inference_ms_p50": 12.687,
+      "inference_ms_p95": 27.406,
+      "preprocess_ms_p50": 0.961,
+      "sequential_throughput_fps": 62.228,
+      "low_motion_angle_step_deg_p50": 1.561,
+      "low_motion_angle_step_deg_p95": 10.699,
+      "all_motion_angle_step_deg_p50": 5.908,
+      "angle_second_difference_deg_p50": 6.932,
+      "thigh_length_cv_pct": 19.792,
+      "shank_length_cv_pct": 17.252,
+      "knee_angle_p05": 4.964,
+      "knee_angle_p95": 124.177,
+      "per_clip_primary_chain": [
+        {
+          "model": "mediapipe-lite",
+          "clip": "E07_P02_AF_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.969,
+          "angle_p05": 3.07,
+          "angle_p50": 68.223,
+          "angle_p95": 122.826
+        },
+        {
+          "model": "mediapipe-lite",
+          "clip": "E07_P02_AR_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.843,
+          "angle_p05": 9.944,
+          "angle_p50": 41.651,
+          "angle_p95": 94.827
+        },
+        {
+          "model": "mediapipe-lite",
+          "clip": "E07_P17_AR_VML_GM.mp4",
+          "primary_side": "right",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.989,
+          "angle_p05": 13.509,
+          "angle_p50": 103.927,
+          "angle_p95": 130.406
+        }
+      ],
+      "in_process_runner_create_ms_all": [
+        333.039,
+        99.169,
+        92.238
+      ]
+    },
+    {
+      "model": "mediapipe-full",
+      "model_asset_bytes": 9398198,
+      "cold_load_ms_median": 292.099,
+      "cold_load_ms_all": [
+        292.099,
+        260.259,
+        299.224
+      ],
+      "evaluated_frames": 1028,
+      "pose_detection_coverage_pct": 100.0,
+      "any_leg_chain_coverage_pct": 100.0,
+      "all_leg_chain_coverage_pct": 98.638,
+      "primary_leg_chain_coverage_pct": 100.0,
+      "primary_median_chain_confidence": 0.953,
+      "primary_chain_coverage_by_raw_confidence_pct": {
+        "0.2": 100.0,
+        "0.3": 100.0,
+        "0.4": 100.0,
+        "0.5": 100.0,
+        "0.6": 100.0,
+        "0.7": 100.0
+      },
+      "total_pose_ms_p50": 19.31,
+      "total_pose_ms_p95": 30.363,
+      "inference_ms_p50": 18.352,
+      "inference_ms_p95": 28.798,
+      "preprocess_ms_p50": 0.896,
+      "sequential_throughput_fps": 47.14,
+      "low_motion_angle_step_deg_p50": 1.318,
+      "low_motion_angle_step_deg_p95": 8.23,
+      "all_motion_angle_step_deg_p50": 5.414,
+      "angle_second_difference_deg_p50": 4.069,
+      "thigh_length_cv_pct": 15.516,
+      "shank_length_cv_pct": 23.084,
+      "knee_angle_p05": 6.292,
+      "knee_angle_p95": 131.295,
+      "per_clip_primary_chain": [
+        {
+          "model": "mediapipe-full",
+          "clip": "E07_P02_AF_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.972,
+          "angle_p05": 4.568,
+          "angle_p50": 87.291,
+          "angle_p95": 130.236
+        },
+        {
+          "model": "mediapipe-full",
+          "clip": "E07_P02_AR_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.917,
+          "angle_p05": 9.636,
+          "angle_p50": 97.233,
+          "angle_p95": 123.566
+        },
+        {
+          "model": "mediapipe-full",
+          "clip": "E07_P17_AR_VML_GM.mp4",
+          "primary_side": "right",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.958,
+          "angle_p05": 6.579,
+          "angle_p50": 107.729,
+          "angle_p95": 135.759
+        }
+      ],
+      "in_process_runner_create_ms_all": [
+        162.379,
+        83.386,
+        100.415
+      ]
+    },
+    {
+      "model": "movenet-lightning-f16",
+      "model_asset_bytes": 4758512,
+      "cold_load_ms_median": 4.989,
+      "cold_load_ms_all": [
+        34.881,
+        4.989,
+        4.811
+      ],
+      "evaluated_frames": 1028,
+      "pose_detection_coverage_pct": 100.0,
+      "any_leg_chain_coverage_pct": 45.428,
+      "all_leg_chain_coverage_pct": 25.778,
+      "primary_leg_chain_coverage_pct": 28.405,
+      "primary_median_chain_confidence": 0.405,
+      "primary_chain_coverage_by_raw_confidence_pct": {
+        "0.2": 87.549,
+        "0.3": 68.774,
+        "0.4": 51.167,
+        "0.5": 28.405,
+        "0.6": 5.642,
+        "0.7": 0.195
+      },
+      "total_pose_ms_p50": 5.403,
+      "total_pose_ms_p95": 11.191,
+      "inference_ms_p50": 5.091,
+      "inference_ms_p95": 10.704,
+      "preprocess_ms_p50": 0.277,
+      "sequential_throughput_fps": 149.757,
+      "low_motion_angle_step_deg_p50": 2.165,
+      "low_motion_angle_step_deg_p95": 12.647,
+      "all_motion_angle_step_deg_p50": 5.968,
+      "angle_second_difference_deg_p50": 4.101,
+      "thigh_length_cv_pct": 15.286,
+      "shank_length_cv_pct": 19.366,
+      "knee_angle_p05": 4.592,
+      "knee_angle_p95": 117.088,
+      "per_clip_primary_chain": [
+        {
+          "model": "movenet-lightning-f16",
+          "clip": "E07_P02_AF_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 41.129,
+          "median_chain_confidence": 0.474,
+          "angle_p05": 4.831,
+          "angle_p50": 51.736,
+          "angle_p95": 111.592
+        },
+        {
+          "model": "movenet-lightning-f16",
+          "clip": "E07_P02_AR_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 27.749,
+          "median_chain_confidence": 0.405,
+          "angle_p05": 6.007,
+          "angle_p50": 19.695,
+          "angle_p95": 114.253
+        },
+        {
+          "model": "movenet-lightning-f16",
+          "clip": "E07_P17_AR_VML_GM.mp4",
+          "primary_side": "right",
+          "coverage_pct": 12.044,
+          "median_chain_confidence": 0.336,
+          "angle_p05": 2.725,
+          "angle_p50": 107.218,
+          "angle_p95": 121.658
+        }
+      ],
+      "in_process_runner_create_ms_all": [
+        19.058,
+        9.517,
+        10.953
+      ]
+    }
+  ],
+  "pairwise_angle_agreement": [
+    {
+      "first": "mediapipe-full",
+      "second": "mediapipe-lite",
+      "common_angle_samples": 1028,
+      "median_absolute_difference_deg": 9.418,
+      "p95_absolute_difference_deg": 68.72,
+      "median_signed_first_minus_second_deg": 8.855
+    },
+    {
+      "first": "mediapipe-full",
+      "second": "movenet-lightning-f16",
+      "common_angle_samples": 292,
+      "median_absolute_difference_deg": 3.719,
+      "p95_absolute_difference_deg": 17.328,
+      "median_signed_first_minus_second_deg": -0.221
+    },
+    {
+      "first": "mediapipe-lite",
+      "second": "movenet-lightning-f16",
+      "common_angle_samples": 292,
+      "median_absolute_difference_deg": 7.45,
+      "p95_absolute_difference_deg": 63.964,
+      "median_signed_first_minus_second_deg": -5.055
+    }
+  ]
+}

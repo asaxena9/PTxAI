@@ -1,0 +1,47 @@
+{
+  "experimentId": "temporal-sampling-audit-2026-08-07-pilot",
+  "evidenceClass": "MEASURED-PILOT",
+  "claim": "On three slow MobiPhysio E07 clips, independent 10/15 Hz MediaPipe Full streams preserve mid-range crossings relative to an independent 30 Hz stream with p95 <= 100 ms and no unmatched boundaries.",
+  "nullHypothesis": "Any tested rate violates a predeclared boundary criterion.",
+  "primaryMetric": {
+    "name": "boundaryAbsoluteErrorMsP95",
+    "direction": "min",
+    "threshold": 100.0
+  },
+  "guardrails": {
+    "missedReferenceBoundaries": 0,
+    "extraCandidateBoundaries": 0
+  },
+  "method": {
+    "model": "mediapipe-full",
+    "referenceHz": 30.0,
+    "smoothingWindowMs": 200.0,
+    "minimumBoundaryGapMs": 400.0,
+    "matchingToleranceMs": 350.0,
+    "threshold": "midpoint of reference p20 and p80 per clip",
+    "warning": "The reference is 30 Hz model output, not biomechanical ground truth. Centered smoothing is non-causal."
+  },
+  "inputs": [
+    {
+      "rateHz": 10.0,
+      "path": "/Users/adityasaxena/Projects/PTxAI-Project/experiments/pose-benchmark/results/2026-07-27-m2-pro/frame_metrics.csv",
+      "sha256": "4d7e366046ef43c0aaa3688ececaae3dab64106de4ace207f8ea6e33e6a02bb2"
+    },
+    {
+      "rateHz": 15.0,
+      "path": "/Users/adityasaxena/Projects/PTxAI-Project/experiments/temporal-sampling-audit/runs/pose-15hz/frame_metrics.csv",
+      "sha256": "0835030ba1d6179045437db45542baccaec2abfb5a04c074d510071c1a1380c8"
+    },
+    {
+      "rateHz": 30.0,
+      "path": "/Users/adityasaxena/Projects/PTxAI-Project/experiments/temporal-sampling-audit/runs/pose-30hz/frame_metrics.csv",
+      "sha256": "ab67db1976a50a4d9b8508155531f1b0872035f5c0502e47f08b1c278c00b5c1"
+    }
+  ],
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "numpy": "2.4.6"
+  },
+  "createdAt": "2026-08-07T22:50:46.136641+00:00"
+}

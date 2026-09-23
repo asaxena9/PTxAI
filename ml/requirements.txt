@@ -1,0 +1,4 @@
+# Versions used for the checked-in synthetic experiment results.
+numpy==1.26.4
+scikit-learn==1.6.1
+torch==2.6.0

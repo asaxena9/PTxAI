@@ -1,0 +1,71 @@
+[
+  {
+    "clip": "E07_P02_AF_VFL_GM.mp4",
+    "side": "left",
+    "frame_index": 534,
+    "full_lite_difference_deg": 85.52321103519327,
+    "models": {
+      "mediapipe-full": {
+        "usable": true,
+        "angle_deg": 96.64949150953615,
+        "chain_confidence": 0.979080855846405
+      },
+      "mediapipe-lite": {
+        "usable": true,
+        "angle_deg": 11.126280474342877,
+        "chain_confidence": 0.9658802151679993
+      },
+      "movenet-lightning-f16": {
+        "usable": true,
+        "angle_deg": 94.37745156646834,
+        "chain_confidence": 0.5816590785980225
+      }
+    }
+  },
+  {
+    "clip": "E07_P02_AR_VFL_GM.mp4",
+    "side": "left",
+    "frame_index": 783,
+    "full_lite_difference_deg": 78.18602577845401,
+    "models": {
+      "mediapipe-full": {
+        "usable": true,
+        "angle_deg": 95.7444107660633,
+        "chain_confidence": 0.9264985918998718
+      },
+      "mediapipe-lite": {
+        "usable": true,
+        "angle_deg": 17.558384987609287,
+        "chain_confidence": 0.8152161240577698
+      },
+      "movenet-lightning-f16": {
+        "usable": true,
+        "angle_deg": 111.39690575566527,
+        "chain_confidence": 0.5105499029159546
+      }
+    }
+  },
+  {
+    "clip": "E07_P17_AR_VML_GM.mp4",
+    "side": "right",
+    "frame_index": 201,
+    "full_lite_difference_deg": 20.51515308940766,
+    "models": {
+      "mediapipe-full": {
+        "usable": true,
+        "angle_deg": 116.22797127563904,
+        "chain_confidence": 0.9514585733413696
+      },
+      "mediapipe-lite": {
+        "usable": true,
+        "angle_deg": 95.71281818623137,
+        "chain_confidence": 0.9901725649833679
+      },
+      "movenet-lightning-f16": {
+        "usable": true,
+        "angle_deg": 108.32134464516383,
+        "chain_confidence": 0.5444200038909912
+      }
+    }
+  }
+]

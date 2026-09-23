@@ -1,0 +1,221 @@
+{
+  "methodology": {
+    "sample_hz_requested": 10.0,
+    "warmup_frames_excluded_from_latency": 10,
+    "input_rotation_deg": -90,
+    "selected_clips": [
+      "E07_P02_AR_VFL_GM.mp4"
+    ],
+    "chain_confidence_threshold": 0.5,
+    "primary_analysis_side": {
+      "E07_P02_AF_VFL_GM.mp4": "left",
+      "E07_P02_AR_VFL_GM.mp4": "left",
+      "E07_P17_AR_VML_GM.mp4": "right"
+    },
+    "static_transition_definition": "bottom quartile of model-independent thumbnail frame change within each clip",
+    "angle_definition": "180 degrees minus the aspect-correct image-space hip-knee-ankle interior angle",
+    "movenet_preprocessing": "192x192 square crop; first frame is full-frame padded, then a confidence-gated hip-centered crop tracks the subject",
+    "warning": "No synchronized anatomical angle ground truth is available. Angle stability and pairwise agreement are not accuracy."
+  },
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "opencv": "4.13.0",
+    "mediapipe": "0.10.31",
+    "tensorflow": "2.20.0",
+    "numpy": "2.4.6"
+  },
+  "clips": {
+    "E07_P02_AR_VFL_GM.mp4": {
+      "clip": "E07_P02_AR_VFL_GM.mp4",
+      "source_fps": 30.13433133306075,
+      "source_frames": 1144,
+      "duration_sec": 37.963344444444445,
+      "width": 1080,
+      "height": 1920,
+      "inference_width": 1920,
+      "inference_height": 1080,
+      "input_rotation_deg": -90,
+      "stride": 3,
+      "sampled_frames": 382,
+      "effective_sample_hz": 10.04477711102025
+    }
+  },
+  "models": [
+    {
+      "model": "mediapipe-lite",
+      "model_asset_bytes": 5777746,
+      "cold_load_ms_median": null,
+      "cold_load_ms_all": [],
+      "evaluated_frames": 382,
+      "pose_detection_coverage_pct": 100.0,
+      "any_leg_chain_coverage_pct": 100.0,
+      "all_leg_chain_coverage_pct": 97.12,
+      "primary_leg_chain_coverage_pct": 100.0,
+      "primary_median_chain_confidence": 0.837,
+      "primary_chain_coverage_by_raw_confidence_pct": {
+        "0.2": 100.0,
+        "0.3": 100.0,
+        "0.4": 100.0,
+        "0.5": 100.0,
+        "0.6": 100.0,
+        "0.7": 100.0
+      },
+      "total_pose_ms_p50": 11.685,
+      "total_pose_ms_p95": 13.824,
+      "inference_ms_p50": 11.1,
+      "inference_ms_p95": 13.166,
+      "preprocess_ms_p50": 0.585,
+      "sequential_throughput_fps": 83.134,
+      "low_motion_angle_step_deg_p50": 1.526,
+      "low_motion_angle_step_deg_p95": 16.867,
+      "all_motion_angle_step_deg_p50": 7.738,
+      "angle_second_difference_deg_p50": 12.131,
+      "thigh_length_cv_pct": 24.846,
+      "shank_length_cv_pct": 10.026,
+      "knee_angle_p05": 9.584,
+      "knee_angle_p95": 91.273,
+      "per_clip_primary_chain": [
+        {
+          "model": "mediapipe-lite",
+          "clip": "E07_P02_AR_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.837,
+          "angle_p05": 9.584,
+          "angle_p50": 41.941,
+          "angle_p95": 91.273
+        }
+      ],
+      "in_process_runner_create_ms_all": [
+        316.977
+      ]
+    },
+    {
+      "model": "mediapipe-full",
+      "model_asset_bytes": 9398198,
+      "cold_load_ms_median": null,
+      "cold_load_ms_all": [],
+      "evaluated_frames": 382,
+      "pose_detection_coverage_pct": 100.0,
+      "any_leg_chain_coverage_pct": 100.0,
+      "all_leg_chain_coverage_pct": 99.215,
+      "primary_leg_chain_coverage_pct": 100.0,
+      "primary_median_chain_confidence": 0.919,
+      "primary_chain_coverage_by_raw_confidence_pct": {
+        "0.2": 100.0,
+        "0.3": 100.0,
+        "0.4": 100.0,
+        "0.5": 100.0,
+        "0.6": 100.0,
+        "0.7": 100.0
+      },
+      "total_pose_ms_p50": 18.35,
+      "total_pose_ms_p95": 27.463,
+      "inference_ms_p50": 17.693,
+      "inference_ms_p95": 26.742,
+      "preprocess_ms_p50": 0.589,
+      "sequential_throughput_fps": 50.621,
+      "low_motion_angle_step_deg_p50": 1.982,
+      "low_motion_angle_step_deg_p95": 12.296,
+      "all_motion_angle_step_deg_p50": 5.486,
+      "angle_second_difference_deg_p50": 6.474,
+      "thigh_length_cv_pct": 16.114,
+      "shank_length_cv_pct": 11.662,
+      "knee_angle_p05": 10.136,
+      "knee_angle_p95": 124.435,
+      "per_clip_primary_chain": [
+        {
+          "model": "mediapipe-full",
+          "clip": "E07_P02_AR_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 100.0,
+          "median_chain_confidence": 0.919,
+          "angle_p05": 10.136,
+          "angle_p50": 97.141,
+          "angle_p95": 124.435
+        }
+      ],
+      "in_process_runner_create_ms_all": [
+        123.116
+      ]
+    },
+    {
+      "model": "movenet-lightning-f16",
+      "model_asset_bytes": 4758512,
+      "cold_load_ms_median": null,
+      "cold_load_ms_all": [],
+      "evaluated_frames": 382,
+      "pose_detection_coverage_pct": 100.0,
+      "any_leg_chain_coverage_pct": 9.686,
+      "all_leg_chain_coverage_pct": 4.843,
+      "primary_leg_chain_coverage_pct": 2.356,
+      "primary_median_chain_confidence": 0.308,
+      "primary_chain_coverage_by_raw_confidence_pct": {
+        "0.2": 86.126,
+        "0.3": 55.236,
+        "0.4": 17.277,
+        "0.5": 2.356,
+        "0.6": 0.262,
+        "0.7": 0.0
+      },
+      "total_pose_ms_p50": 5.712,
+      "total_pose_ms_p95": 10.955,
+      "inference_ms_p50": 5.442,
+      "inference_ms_p95": 10.714,
+      "preprocess_ms_p50": 0.234,
+      "sequential_throughput_fps": 155.283,
+      "low_motion_angle_step_deg_p50": null,
+      "low_motion_angle_step_deg_p95": null,
+      "all_motion_angle_step_deg_p50": null,
+      "angle_second_difference_deg_p50": null,
+      "thigh_length_cv_pct": 13.999,
+      "shank_length_cv_pct": 16.05,
+      "knee_angle_p05": 11.152,
+      "knee_angle_p95": 112.457,
+      "per_clip_primary_chain": [
+        {
+          "model": "movenet-lightning-f16",
+          "clip": "E07_P02_AR_VFL_GM.mp4",
+          "primary_side": "left",
+          "coverage_pct": 2.356,
+          "median_chain_confidence": 0.308,
+          "angle_p05": 11.152,
+          "angle_p50": 17.207,
+          "angle_p95": 112.457
+        }
+      ],
+      "in_process_runner_create_ms_all": [
+        26.748
+      ]
+    }
+  ],
+  "pairwise_angle_agreement": [
+    {
+      "first": "mediapipe-full",
+      "second": "mediapipe-lite",
+      "common_angle_samples": 382,
+      "median_absolute_difference_deg": 33.378,
+      "p95_absolute_difference_deg": 83.562,
+      "median_signed_first_minus_second_deg": 33.378
+    },
+    {
+      "first": "mediapipe-full",
+      "second": "movenet-lightning-f16",
+      "common_angle_samples": 9,
+      "median_absolute_difference_deg": 3.143,
+      "p95_absolute_difference_deg": 10.061,
+      "median_signed_first_minus_second_deg": -3.143
+    },
+    {
+      "first": "mediapipe-lite",
+      "second": "movenet-lightning-f16",
+      "common_angle_samples": 9,
+      "median_absolute_difference_deg": 7.753,
+      "p95_absolute_difference_deg": 41.366,
+      "median_signed_first_minus_second_deg": -7.753
+    }
+  ]
+}
